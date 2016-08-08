@@ -1,0 +1,14 @@
+<div class='left'>
+  <h1><%= link_to 'vagy ma?', root_path %></h1>
+</div>
+
+<div class='right'>
+  <% if signed_in? %>
+    <%= image_tag 'fasz.png' %>
+    <%= link_to "#{current_user.name}", edit_user_path(current_user) %>
+    <%= link_to 'logout', logout_path %>
+  <% else %>
+    <%= link_to 'registration', new_user_path %>
+    <%= link_to 'login', login_path %>
+  <% end %>
+</div>

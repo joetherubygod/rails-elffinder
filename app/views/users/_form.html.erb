@@ -1,0 +1,26 @@
+<% if @user.errors.any? %>
+  <div class="error">
+    <% @user.errors.full_messages.each do |m| %>
+        <p><%= m %></p>
+    <% end %>
+  </div>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :name, 'Name:' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email, 'E-mail:' %>
+  <%= f.text_field :email %>
+
+  <%= f.label :password, 'Password:' %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation, 'Password Confirmation' %>
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.label :available, 'Available?' %>
+  <%= f.check_box :available %>
+
+  <%= f.submit 'Send' %>
+<% end %>

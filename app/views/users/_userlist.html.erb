@@ -1,0 +1,20 @@
+<table>
+  <tbody>
+    <% @users.each do |u| %>
+      <tr>
+        <td>
+          <strong>
+            <%= u.name %>
+          </strong>
+        </td>
+        <td>
+          <% if u.available %>
+            <p>leszek</p>
+          <% else %>
+            <p>nem leszek</p>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

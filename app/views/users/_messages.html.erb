@@ -1,0 +1,6 @@
+<% @messages.each do |m| %>
+  <article>
+    <h3><%= m.user.name %> - <%= m.created_at %></h3>
+    <p><%= m.text %></p>
+  </article>
+<% end %>

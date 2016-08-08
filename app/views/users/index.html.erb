@@ -1,0 +1,9 @@
+<section class='time center'><%= render 'time' %></section>
+<section class='userlist'><%= render 'userlist' %></section>
+<section class='messages'><%= render 'messages' %></section>
+
+<% if signed_in? %>
+  <footer>
+    <%= render 'messages/form' %>
+  </footer>
+<% end %>
